@@ -21,7 +21,7 @@ export default function Navbar() {
   return (
     <header className="border-b border-field/10 bg-field">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link to="/" className="font-display text-xl font-semibold text-paper">
+        <Link to="/" className="font-display text-xl font-semibold text-paper transition-opacity hover:opacity-80">
           AgriTrade <span className="text-harvest">Hub</span>
         </Link>
         {user && (

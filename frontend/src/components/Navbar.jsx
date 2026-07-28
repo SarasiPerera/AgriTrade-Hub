@@ -1,4 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 import { useAuth } from "../context/AuthContext";
 
 const roleLabels = {
@@ -28,12 +29,13 @@ export default function Navbar() {
             <span className="font-mono text-xs uppercase tracking-wide text-paper/70">
               {roleLabels[user.role]} · {user.full_name}
             </span>
-            <button
+            <motion.button
+               whileTap={{ scale: 0.95 }}
               onClick={handleLogout}
-              className="focus-ring rounded-md border border-paper/30 px-3 py-1.5 text-sm text-paper transition hover:bg-paper/10"
+              className="focus-ring rounded-md border border-paper/30 px-3 py-1.5 text-sm text-paper transition-colors hover:bg-paper/10"
             >
               Log out
-            </button>
+            </motion.button>
           </div>
         )}
       </div>
